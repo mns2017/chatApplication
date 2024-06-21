@@ -41,7 +41,7 @@ export const LogoutUser =  (req,res)=>{
 
 export const SignupUser = async (req,res)=>{
     try {
-        const {fullname,username,password,confirmPassword,gender,gmail} = req.body;
+        const {fullname,username,password,confirmPassword,gender, gmail} = req.body;
         if(password !== confirmPassword){
             return res.status(400).json({error:"password dnt't match"})
         }
